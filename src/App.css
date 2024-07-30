@@ -1,9 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/* Reset CSS margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Define CSS variables for text sizes */
+:root {
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.5rem;
+  --font-size-p: 1rem;
+}
+
 .container {
+  width: 100%;
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 1rem;
+  justify-items: center;
+  overflow-x: clip;
 }
 
 nav * {
@@ -16,14 +40,15 @@ nav * {
   scale: 1.3;
   margin: 0 1rem;
 }
+
 header {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+  margin: 1rem 0;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
 }
+
 nav > ul {
   display: flex;
   justify-content: space-around;
@@ -42,6 +67,42 @@ nav a:hover {
   text-shadow: #f4ce14 2px;
 }
 
+.wrapper__hero {
+  width: 100vw;
+  background-color: #495e57;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 4rem;
+  color: #f4ce14;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--font-size-h1);
+  margin-bottom: 0%;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: var(--font-size-h2);
+  margin-top: 1rem;
+}
+
+h3 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  margin-top: 0%;
+}
+
 .button {
   display: inline-block;
   background-color: #f4ce14;
@@ -52,36 +113,13 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.wrapper__hero {
-  background-color: #495e57;
-}
-
-.hero {
-  display: flex;
-  width: 100%;
-}
-h1 {
-  color: #f4ce14;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 4rem;
-  margin-bottom: 0%;
-}
-
-h3 {
-  color: white;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-size: xx-large;
-  margin-top: 0%;
-}
 .hero__info {
   width: 40%;
 }
+
 .hero__info p {
   color: white;
-  font-size: large;
+  font-size: var(--font-size-p);
   text-align: justify;
   margin-bottom: 2rem;
   width: 90%;
@@ -94,17 +132,131 @@ h3 {
 #resturant_photo {
   border-radius: 15px;
   position: relative;
+  z-index: 10;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-  left: 40%;
+  left: 20%;
   bottom: -10%;
 }
 
+.specials__title {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.specials__dishes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+
+.card {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 220px auto auto auto;
+  place-content: center;
+  border-radius: 10px;
+  background-color: #edefee;
+}
+
+.card__price {
+  color: #ee9972;
+}
+
+.card__image {
+  overflow: hidden;
+}
+
+#card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card__heading,
+.card__action,
+.specials__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__heading {
+  margin-top: 0.5rem;
+  justify-content: space-between;
+}
+
+.card__action,
+.card__heading {
+  font-size: large;
+  font-weight: bold;
+  text-justify: left;
+}
+
+.card__action {
+  margin-bottom: 1rem;
+}
+
+#deliver_icon {
+  scale: 1.4;
+}
+
+.card div:not(.card__action) > p,
+.card__heading,
+.card__action {
+  padding: 0 1rem;
+  text-align: justify;
+}
+
+/* Media Queries for Responsive Text Sizes */
+@media (min-width: 600px) {
+  :root {
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h3: 2rem;
+    --font-size-p: 1.25rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .specials__dishes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__info {
+    width: 60%;
+  }
+}
+
 @media (min-width: 800px) {
+  #resturant_photo {
+    left: 60%;
+  }
+
   header {
     flex-direction: row;
-    gap: 3rem;
+    justify-content: space-between;
   }
-  nav ul {
-    width: 45vw;
+
+  .specials__dishes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero__info {
+    width: 40%;
+  }
+}
+
+@media (min-width: 925px) {
+  :root {
+    --font-size-h1: 4rem;
+    --font-size-h2: 3.5rem;
+    --font-size-h3: 2.5rem;
+    --font-size-p: 1.5rem;
   }
 }
