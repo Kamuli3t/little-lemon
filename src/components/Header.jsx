@@ -8,7 +8,7 @@ const Header = ({ heading = "h1", content }) => {
   }
 
   // Efficient JSX with dynamic heading tag
-  return <header>{React.createElement(heading, null, content)}</header>;
+  return <>{React.createElement(heading, null, content)}</>;
 };
 
 export default Header;
