@@ -15,7 +15,7 @@ const Cards = ({ image, title, price, description }) => {
         <p>{description}</p>
       </div>
       <div className="card__action">
-        <div>Order a derivery</div>
+        <div className="mt-4">Order a derivery</div>
         <MdDeliveryDining id="deliver_icon" />
       </div>
     </div>

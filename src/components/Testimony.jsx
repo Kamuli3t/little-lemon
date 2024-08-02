@@ -3,7 +3,7 @@ import Avatar from "../assets/public.png";
 
 const Testimony = () => {
   return (
-    <div className="grid grid-flow-row grid-row-3 bg-slate-200 w-100 p-4 rounded-md">
+    <div className="grid grid-flow-row grid-row-3 bg-slate-200 w-100 p-4 rounded-lg">
       <div className="text-xl mb-4 ">Rating</div>
       <div className="flex justify-start items-center gap-4 w-full mb-4">
         <div>
@@ -12,7 +12,7 @@ const Testimony = () => {
         <p className="font-bold">Name Here</p>
       </div>
 
-      <div>
+      <div className="text-justify">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo suscipit
         similique iusto eos doloribus amet, nam minima magnam obcaecati.
       </div>

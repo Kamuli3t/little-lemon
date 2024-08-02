@@ -5,7 +5,7 @@ import She from "../assets/6108-06166728en_Masterfile.jpg";
 
 const About = () => {
   return (
-    <div class="container p-4 m-4">
+    <div class="container p-4 ">
       <Header
         content="Little Lemon"
         heading="h3"
@@ -14,14 +14,13 @@ const About = () => {
       <Header content="Chicago" heading="h4" className=" text-black" />
       <div class="flex mt-10">
         <div class="w-1/2">
-          <p class="mt-4 text-base">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
-          </p>
-          <p class="mt-4 text-base">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
+          <p class="mt-4 mb-10 text-base">
+            Welcome to Little Lemon, a family-owned Mediterranean restaurant
+            where tradition meets modern flair. We specialize in classic
+            Mediterranean recipes served with a contemporary twist. Our
+            commitment to using the freshest ingredients ensures that every dish
+            is a delightful experience. Join us for a warm, inviting atmosphere
+            and exceptional dining. Thank you for choosing Little Lemon!
           </p>
         </div>
         <div class="w-1/2 relative">
@@ -32,7 +31,7 @@ const About = () => {
             <img
               src={She}
               alt=""
-              className="object-cover bottom-0 translate-x-[10%] rounded-xl shadow-lg"
+              className="object-cover bottom-0 translate-x-[10%] md:translate-y-[-40%] rounded-xl shadow-lg"
             />
           </div>
           <div
@@ -42,7 +41,7 @@ const About = () => {
             <img
               src={He}
               alt=""
-              className=" object-cover z-10 translate-x-[80%] translate-y-[-40%] rounded-xl shadow-lg"
+              className=" object-cover z-10 translate-x-[80%] translate-y-[-40%] md:translate-y-[-80%]  rounded-xl shadow-lg"
             />
           </div>
         </div>
