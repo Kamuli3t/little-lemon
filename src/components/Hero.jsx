@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Button from "./Button";
 import resturantphoto from "../assets/restauranfood.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,7 +15,9 @@ const Hero = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <Button content="Reserve a Table" />
+          <Link to="/booking">
+            <Button content="Reserve a Table" />
+          </Link>
         </div>
         <div className="hero__pic">
           <img
