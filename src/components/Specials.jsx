@@ -40,6 +40,7 @@ const Specials = () => {
       <div className="specials__dishes">
         {cards.map((dish) => (
           <Cards
+            key={dish.title}
             image={dish.image}
             title={dish.title}
             price={dish.price}

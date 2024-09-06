@@ -231,6 +231,11 @@ h3 {
   height: 100%;
 }
 
+.disabled {
+  background-color: rgb(187, 187, 187);
+  cursor: not-allowed;
+}
+
 /* Media Queries for Responsive Text Sizes */
 @media (min-width: 600px) {
   :root {

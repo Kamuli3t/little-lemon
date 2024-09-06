@@ -16,7 +16,7 @@ const Hero = () => {
             traditional recipes served with a modern twist.
           </p>
           <Link to="/booking">
-            <Button content="Reserve a Table" />
+            <Button isFilled={true} content="Reserve a Table" />
           </Link>
         </div>
         <div className="hero__pic">
